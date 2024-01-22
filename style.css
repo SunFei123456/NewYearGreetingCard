@@ -1,0 +1,141 @@
+
+
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+  }
+
+  body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #D9AFD9;
+      background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+      overflow: hidden;
+
+  }
+
+  .card {
+      position: relative;
+      width: 700px;
+      height: 400px;
+      perspective: 800px;
+  }
+
+  .btn {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+  }
+
+  .front,
+  .back {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      backface-visibility: hidden;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+  }
+
+  /* 贺卡的前面 */
+
+  .front {
+      background-color: #145d98;
+  }
+
+  .front img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+
+  .back {
+      position: relative;
+      background-color: #b41717;
+      transform: rotateY(180deg);
+  }
+
+  /* 图片边框 */
+  .border {
+      width: 100%;
+      height: 100%;
+      background-image: url("assets/border.png");
+      background-position: center center;
+      background-size: cover;
+  }
+
+  .content {
+      /* 水平垂直居中 绝对定位 */
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      width: 90%;
+      height: 70%;
+      border-radius: 10px;
+      background-color: rgba(249, 249, 249, 0.724);
+  }
+
+  .textBox {
+      margin-top: 36px;
+      padding: 16px;
+      width: 65%;
+  }
+
+  .textBox .greetings {
+      /* 文本缩进 */
+      text-indent: 2em;
+  }
+
+  /* 固定祝福语 */
+  .textBox .fixedGreetings {
+      /* 文本缩进 */
+      text-indent: 2em;
+      font-weight: 800;
+      color: #b41717;
+  }
+
+  /* 页尾 */
+  .textBox .end {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      /* 全部大写 */
+      text-transform: uppercase;
+      font-size: 12px;
+  }
+
+  #logo {
+      z-index: 999;
+      width: 200px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer;
+      transition: all 0.5s;
+  }
+
+  #logo:hover {
+      transform: scale(1.3);
+      /* 滤镜 */
+      filter: drop-shadow(0 0 5px #c10f0f);
+  }
+
+  .card.flip .front {
+      transform: rotateY(-180deg);
+  }
+
+  .card.flip .back {
+      transform: rotateY(0deg);
+  }

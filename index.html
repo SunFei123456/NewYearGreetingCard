@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义龙年贺卡</title>
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- 首页 -->
+        <div class="front">
+            <img src="./assets/2.jpg" alt="" srcset="">
+            <button class="css-button-arrow--red btn">点我 </button>
+        </div>
+        <!--  内容 -->
+        <div class="back" id="target">
+            <!-- 图片边框 -->
+            <img src="./assets/border.png" class="border" alt="">
+
+            <!-- 主要内容文本填充区域 -->
+            <div class="content">
+                <!-- 左边文字 -->
+                <div class="textBox">
+                    <div class="title" contenteditable="true">尊敬的孙飞先生</div>
+                    <br>
+                    <div class="greetings" contenteditable="true">春节到了, 愿您携一份活泼的心情,过好一年红红火火的日子, 做一个积极乐观的人,展望一个金灿灿的未来
+
+                    </div>
+
+                    <br>
+                    <div class="fixedGreetings">
+                        <span> 身体健康 |</span>
+                        <span> 阖家幸福 |</span>
+                        <span> 万事如意 </span>
+                    </div>
+                    <div class="end">
+                        Happy New Year, all the best and good health in the new year
+                    </div>
+                </div>
+                <!-- 右边标志性图片 -->
+                <img src="./assets/1.png" alt="" id="logo">
+            </div>
+            <button onclick="captureAndSave()" class="css-button-sliding-to-left--green">保存</button>
+        </div>
+
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
